@@ -1,0 +1,501 @@
+{
+  "nodes":
+  [
+    {
+      "type":"kernel"
+      , "id":2
+      , "name":"readY"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":3
+          , "name":"readY.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"37"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":4
+          , "name":"readY.B1"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":5
+          , "name":"readY.B2"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":6
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl"
+                    , "line":11
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"41"
+                  , "Latency":"512"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":7
+              , "name":"Channel Write"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl"
+                    , "line":12
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Depth":"1"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"553"
+                  , "Latency":"64"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#qah1476410829821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":9
+              , "name":"loop"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl"
+                    , "line":10
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"10"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":10
+              , "name":"loop end"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"617"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"617"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"kernel"
+      , "id":12
+      , "name":"SAXPY"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":13
+          , "name":"SAXPY.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"45"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":14
+          , "name":"SAXPY.B1"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":15
+          , "name":"SAXPY.B2"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":16
+              , "name":"Channel Read"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl"
+                    , "line":25
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Depth":"1"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"489"
+                  , "Latency":"64"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Channels"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#qah1476410829821"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":17
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl"
+                    , "line":26
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"41"
+                  , "Latency":"512"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":18
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl"
+                    , "line":26
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"593"
+                  , "Latency":"64"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":19
+              , "name":"loop"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl"
+                    , "line":23
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"20"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":20
+              , "name":"loop end"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"657"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"657"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"memtype"
+      , "id":1
+      , "name":"Global Memory"
+      , "children":
+      [
+        {
+          "type":"memsys"
+          , "id":11
+          , "name":"DDR"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Number of banks":"4"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"channel"
+      , "id":8
+      , "name":"p_y"
+      , "debug":
+      [
+        [
+          {
+            "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl"
+            , "line":6
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"table"
+          , "Width":"512 bits"
+          , "Depth":"1"
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":7
+      , "to":8
+    }
+    , {
+      "from":10
+      , "to":4
+    }
+    , {
+      "from":3
+      , "to":9
+    }
+    , {
+      "from":6
+      , "to":10
+    }
+    , {
+      "from":7
+      , "to":10
+    }
+    , {
+      "from":9
+      , "to":6
+    }
+    , {
+      "from":6
+      , "to":7
+    }
+    , {
+      "from":11
+      , "to":6
+    }
+    , {
+      "from":8
+      , "to":16
+    }
+    , {
+      "from":20
+      , "to":14
+    }
+    , {
+      "from":13
+      , "to":19
+    }
+    , {
+      "from":16
+      , "to":20
+    }
+    , {
+      "from":17
+      , "to":20
+    }
+    , {
+      "from":18
+      , "to":20
+    }
+    , {
+      "from":19
+      , "to":16
+    }
+    , {
+      "from":19
+      , "to":17
+    }
+    , {
+      "from":16
+      , "to":18
+    }
+    , {
+      "from":17
+      , "to":18
+    }
+    , {
+      "from":18
+      , "to":11
+    }
+    , {
+      "from":11
+      , "to":17
+    }
+  ]
+}

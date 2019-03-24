@@ -1,0 +1,838 @@
+{
+  "nodes":
+  [
+    {
+      "type":"kernel"
+      , "id":2
+      , "name":"SAXPY"
+      , "children":
+      [
+        {
+          "type":"bb"
+          , "id":3
+          , "name":"SAXPY.B0"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"19"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":4
+          , "name":"SAXPY.B1"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":5
+          , "name":"SAXPY.B2"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"13"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Entry to loop. "
+              , "Loops To":"10"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":6
+          , "name":"SAXPY.B3"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":7
+          , "name":"SAXPY.B4"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":12
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":18
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced cached"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"15"
+                  , "Latency":"217"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":13
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":18
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Local-pipelined never-stall"
+                  , "Stall-free":"Yes"
+                  , "Stores to":"local_x"
+                  , "Start Cycle":"237"
+                  , "Latency":"1"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":19
+              , "name":"loop"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":17
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"20"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":20
+              , "name":"loop end"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"244"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"244"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":8
+          , "name":"SAXPY.B5"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":9
+          , "name":"SAXPY.B6"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":14
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":22
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced cached"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"15"
+                  , "Latency":"217"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":15
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":22
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Local-pipelined never-stall"
+                  , "Stall-free":"Yes"
+                  , "Stores to":"local_y"
+                  , "Start Cycle":"237"
+                  , "Latency":"1"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":21
+              , "name":"loop"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":21
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"22"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":22
+              , "name":"loop end"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"244"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"244"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":10
+          , "name":"SAXPY.B7"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"0"
+              , "II":"1"
+              , "Subloops":"Yes"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":"Exit which branches back to loop. "
+            }
+          ]
+        }
+        , {
+          "type":"bb"
+          , "id":11
+          , "name":"SAXPY.B8"
+          , "children":
+          [
+            {
+              "type":"inst"
+              , "id":16
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":26
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Local-pipelined never-stall"
+                  , "Stall-free":"Yes"
+                  , "Loads from":"local_x"
+                  , "Start Cycle":"8"
+                  , "Latency":"4"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":17
+              , "name":"Load"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":26
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Local-pipelined never-stall"
+                  , "Stall-free":"Yes"
+                  , "Loads from":"local_y"
+                  , "Start Cycle":"8"
+                  , "Latency":"4"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":18
+              , "name":"Store"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":26
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Width":"512 bits"
+                  , "Type":"Burst-coalesced write-ack"
+                  , "Stall-free":"No"
+                  , "Start Cycle":"23"
+                  , "Latency":"56"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Load-Store Units"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":23
+              , "name":"loop"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":25
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"0"
+                  , "Latency":"1"
+                  , "Loops To":"24"
+                }
+              ]
+            }
+            , {
+              "type":"inst"
+              , "id":24
+              , "name":"loop end"
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "Start Cycle":"79"
+                  , "Latency":"1"
+                }
+              ]
+            }
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Latency":"79"
+              , "II":"1"
+              , "Subloops":"No"
+              , "Pipelined":"Yes"
+              , "Fmax Bottlenecks":"No"
+              , "Loop Info":""
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":25
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":26
+              , "name":"local_x"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":14
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"4096B requested\n16384B implemented"
+                    }
+                  ]
+                  , "Requested size":"4096 bytes"
+                  , "Implemented size":"16384 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"64 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                          , "line":"13"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"memsys"
+              , "id":30
+              , "name":"local_y"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                    , "line":15
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"4096B requested\n16384B implemented"
+                    }
+                  ]
+                  , "Requested size":"4096 bytes"
+                  , "Implemented size":"16384 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"512 bits"
+                  , "Bank depth":"64 words"
+                  , "Total replication":"4"
+                  , "Additional Information":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"4 independent copies of this memory were created to enable simultaneous execution of 4 loop iterations defined at  (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY3_ivdep.cl"
+                          , "line":"13"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"You can reduce the number of copies of this memory by limiting the concurrency of its loop; see the OpenCL Programming Guide for details."
+                    }
+                  ]
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "type":"memtype"
+      , "id":1
+      , "name":"Global Memory"
+      , "children":
+      [
+        {
+          "type":"memsys"
+          , "id":34
+          , "name":"DDR"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Number of banks":"4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":26
+      , "to":16
+    }
+    , {
+      "from":13
+      , "to":26
+    }
+    , {
+      "from":30
+      , "to":17
+    }
+    , {
+      "from":15
+      , "to":30
+    }
+    , {
+      "from":10
+      , "to":4
+    }
+    , {
+      "from":10
+      , "to":5
+    }
+    , {
+      "from":3
+      , "to":5
+    }
+    , {
+      "from":20
+      , "to":6
+    }
+    , {
+      "from":20
+      , "to":19
+    }
+    , {
+      "from":5
+      , "to":19
+    }
+    , {
+      "from":12
+      , "to":20
+    }
+    , {
+      "from":13
+      , "to":20
+    }
+    , {
+      "from":22
+      , "to":8
+    }
+    , {
+      "from":22
+      , "to":21
+    }
+    , {
+      "from":6
+      , "to":21
+    }
+    , {
+      "from":14
+      , "to":22
+    }
+    , {
+      "from":15
+      , "to":22
+    }
+    , {
+      "from":24
+      , "to":10
+    }
+    , {
+      "from":24
+      , "to":23
+    }
+    , {
+      "from":8
+      , "to":23
+    }
+    , {
+      "from":16
+      , "to":24
+    }
+    , {
+      "from":17
+      , "to":24
+    }
+    , {
+      "from":18
+      , "to":24
+    }
+    , {
+      "from":19
+      , "to":12
+    }
+    , {
+      "from":12
+      , "to":13
+    }
+    , {
+      "from":21
+      , "to":14
+    }
+    , {
+      "from":14
+      , "to":15
+    }
+    , {
+      "from":23
+      , "to":16
+    }
+    , {
+      "from":23
+      , "to":17
+    }
+    , {
+      "from":16
+      , "to":18
+    }
+    , {
+      "from":17
+      , "to":18
+    }
+    , {
+      "from":34
+      , "to":14
+    }
+    , {
+      "from":34
+      , "to":12
+    }
+    , {
+      "from":18
+      , "to":34
+    }
+  ]
+}

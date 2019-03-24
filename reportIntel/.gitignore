@@ -1,0 +1,9 @@
+# object files and other files in each project top level
+*.aoco
+*.aocr
+*/*.*
+
+# no directories except for reports
+*/*/
+!*/reports/
+

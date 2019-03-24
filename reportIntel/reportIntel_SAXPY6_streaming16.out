@@ -1,0 +1,32 @@
+aoc -rtl -report -v -board=p520_max_sg280l -fp-relaxed -fpc device/SAXPY6_streaming16.cl
+aoc: Environment checks are completed successfully.
+aoc: Cached files in /var/tmp/aocl/ may be used to reduce compilation time
+aoc: Selected target board p520_max_sg280l
+aoc: Running OpenCL parser....
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl:3:33: warning: unknown attribute 'xcl_reqd_pipe_depth' ignored
+PIPE float16 p_y __attribute__((xcl_reqd_pipe_depth(32)));
+                                ^
+1 warning generated.
+aoc: OpenCL parser completed successfully.
+aoc: Linking Object files....
+aoc: Optimizing and doing static analysis of code...
+aoc: Linking with IP library ...
+Checking if memory usage is larger than 100%
+
+!===========================================================================
+! The report below may be inaccurate. A more comprehensive           
+! resource usage report can be found at SAXPY6_streaming16/reports/report.html    
+!===========================================================================
+
++--------------------------------------------------------------------+
+; Estimated Resource Usage Summary                                   ;
++----------------------------------------+---------------------------+
+; Resource                               + Usage                     ;
++----------------------------------------+---------------------------+
+; Logic utilization                      ;   70%                     ;
+; ALUTs                                  ;   36%                     ;
+; Dedicated logic registers              ;   36%                     ;
+; Memory blocks                          ;   32%                     ;
+; DSP blocks                             ;   29%                     ;
++----------------------------------------+---------------------------;
+aoc: First stage compilation completed successfully.

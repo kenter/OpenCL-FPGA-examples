@@ -1,0 +1,6 @@
+{"rows":[
+{"name":"unknown attribute 'xcl_reqd_pipe_depth' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY5_streaming.cl"
+,"line":3}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY5_streaming.cl:3:31: warning: unknown attribute 'xcl_reqd_pipe_depth' ignored"]}
+]}

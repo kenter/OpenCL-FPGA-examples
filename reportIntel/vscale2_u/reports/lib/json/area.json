@@ -1,0 +1,534 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "MLABs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [69.1185, 35.5754, 35.6036, 32.0603, 29.2748]
+  , "total":
+  [492714, 986691, 2871, 1308, 12]
+  , "name":"Kernel System"
+  , "max_resources":
+  [1385660, 2771320, 8955, 4468, 69283]
+  , "children":
+  [
+    {
+      "name":"Static Partition"
+      , "type":"partition"
+      , "children":
+      [
+        {
+          "name":"Board interface"
+          , "type":"resource"
+          , "data":
+          [480580, 961160, 2766, 1292, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Platform interface logic."
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [7490, 15614, 52, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 1 global load and 1 global store."
+        }
+        , {
+          "type":"brief"
+          , "text":"For 1 global load and 1 global store."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"https://www.altera.com/documentation/mwh1391807516407.html#hnj1476724450050"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"System description ROM"
+      , "type":"resource"
+      , "data":
+      [2, 71, 2, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"This read-only memory contains information for the host about the system and about each kernel in the system, including kernel names, arguments, and attributes.  The system description ROM ensures that the binary image on the FPGA is compatible with the host program."
+        }
+        , {
+          "type":"brief"
+          , "text":"Contains information for the host."
+        }
+      ]
+    }
+    , {
+      "name":"vscale"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.687466, 0.352323, 0.355282, 0.569514, 0.358102]
+      , "total_kernel_resources":
+      [4642, 9846, 51, 16, 12]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1463, 1467, 0, 0, 6]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+            , {
+              "type":"brief"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (vscale2_u.cl:12)"
+          , "type":"resource"
+          , "data":
+          [24, 64, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale2_u.cl"
+                , "line":12
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 32 width"
+            }
+          ]
+        }
+        , {
+          "name":"vscale.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 7, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 4, 0, 0, 0]
+                }
+                , {
+                  "name":"vscale2_u.cl:12"
+                  , "type":"resource"
+                  , "data":
+                  [0, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale2_u.cl"
+                        , "line":12
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"vscale2_u.cl:13"
+                  , "type":"resource"
+                  , "data":
+                  [0, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale2_u.cl"
+                        , "line":13
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [24, 39, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"vscale2_u.cl:12"
+                  , "type":"resource"
+                  , "data":
+                  [35, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale2_u.cl"
+                        , "line":12
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"vscale.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [92, 979, 2, 0, 4]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [92, 979, 2, 0, 4]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [48, 41, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"vscale2_u.cl:12"
+                  , "type":"resource"
+                  , "data":
+                  [48, 41, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale2_u.cl"
+                        , "line":12
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [497, 865, 20, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [256, 64, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":""
+                        , "line":0
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"64-bit Or"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [256, 64, 0, 0, 0]
+                    }
+                  ]
+                }
+                , {
+                  "name":"vscale2_u.cl:12"
+                  , "type":"resource"
+                  , "data":
+                  [664, 38, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale2_u.cl"
+                        , "line":12
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":72
+                      , "data":
+                      [71, 21, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":16
+                      , "data":
+                      [560, 16, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"vscale2_u.cl:13"
+                  , "type":"resource"
+                  , "data":
+                  [1539, 6281, 29, 16, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale2_u.cl"
+                        , "line":13
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [1, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Hardened Floating-point Multiply"
+                      , "type":"resource"
+                      , "count":16
+                      , "data":
+                      [768, 1536, 0, 16, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [425, 1957, 13, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [345, 2788, 16, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{"name":"Info","rows":[
+{"classes":["info-table"],"name":"Project Name","data":["vscale2_u"]},
+{"name":"Target Family, Device, Board","data":["Stratix 10, 1SG280LU3F50E1VGS1, nalla_pcie:p520_max_sg280l"]},
+{"name":"AOC Version","data":["18.1.1 Build 263"]},
+{"name":"Quartus Version","data":["18.1.1 Build 263 Pro"]},
+{"name":"Command","data":["aoc -rtl -report -v -board=p520_max_sg280l -fp-relaxed -fpc device/vscale2_u.cl"]},
+{"name":"Reports Generated At","data":["Sun Mar 24 18:31:52 2019"]}
+]}

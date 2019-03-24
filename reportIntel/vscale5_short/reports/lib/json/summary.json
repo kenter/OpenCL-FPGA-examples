@@ -1,0 +1,106 @@
+{
+  "performanceSummary":
+  {
+    "name":"Kernel Summary"
+    , "columns":
+    ["Kernel Name", "Kernel Type", "Autorun", "Workgroup Size", "# Compute Units", "HyperFlex Control Optimizations"]
+    , "children":
+    [
+      {
+        "name":"vscale"
+        , "data":
+        [
+          "Single work-item"
+          , "No"
+          , [1, 1, 1]
+          , 1
+          , "On"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: Single work-item"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (1, 1, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 1"
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale5_short.cl"
+              , "line":4
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Kernel Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs ", "MLABs"]
+    , "children":
+    [
+      {
+        "name":"vscale"
+        , "data":
+        [3050, 7349, 39, 8, 9]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale5_short.cl"
+              , "line":4
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Global Interconnect"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [7490, 15614, 52, 0, 0]
+      }
+      , {
+        "name":"Board Interface"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [480580, 961160, 2766, 1292, 0]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [491122, 984194, 2859, 1300, 9]
+        , "data_percent":
+        [35.4432, 35.5135, 31.9263, 29.0958, 68.9081]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [1385660, 2771320, 8955, 4468, 0]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+    ]
+  }
+}

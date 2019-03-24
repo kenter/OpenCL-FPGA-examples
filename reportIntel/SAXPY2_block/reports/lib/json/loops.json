@@ -1,0 +1,248 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Bottleneck", "Details"]
+  , "children":
+  [
+    {
+      "name":"Kernel: SAXPY"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY2_block.cl"
+            , "line":7
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Kernels"
+              , "link":"https://www.altera.com/documentation/mwh1391807516407.html#ipp1476408832230"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"SAXPY.B2"
+          , "data":
+          ["Yes", ">=1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY2_block.cl"
+                , "line":13
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Iteration executed serially across SAXPY.B6, SAXPY.B8. Only a single loop iteration will execute inside this region due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY2_block.cl"
+                      , "line":"22"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY2_block.cl"
+                      , "line":"26"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"brief"
+              , "text":"Serial exe: Memory dependency"
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Nested Loops"
+                  , "link":"https://www.altera.com/documentation/mwh1391807516407.html#rfr1469543500580"
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+            {
+              "name":"16X Partially unrolled SAXPY.B4"
+              , "data":
+              ["Yes", "~1", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY2_block.cl"
+                    , "line":17
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Loop orchestration compiler optimization is enabled."
+                }
+                , {
+                  "type":"brief"
+                  , "text":"II is an approximation."
+                }
+                , {
+                  "type":"text"
+                  , "text":"II is an approximation due to the following stallable instruction:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Load Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY2_block.cl"
+                          , "line":"18"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+              ]
+            }
+            , {
+              "name":"16X Partially unrolled SAXPY.B6"
+              , "data":
+              ["Yes", "~1", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY2_block.cl"
+                    , "line":21
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Loop orchestration compiler optimization is enabled."
+                }
+                , {
+                  "type":"brief"
+                  , "text":"II is an approximation."
+                }
+                , {
+                  "type":"text"
+                  , "text":"II is an approximation due to the following stallable instruction:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Load Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY2_block.cl"
+                          , "line":"22"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+              ]
+            }
+            , {
+              "name":"16X Partially unrolled SAXPY.B8"
+              , "data":
+              ["Yes", "~1", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY2_block.cl"
+                    , "line":25
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Loop orchestration compiler optimization is enabled."
+                }
+                , {
+                  "type":"brief"
+                  , "text":"II is an approximation."
+                }
+                , {
+                  "type":"text"
+                  , "text":"II is an approximation due to the following stallable instruction:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Store Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY2_block.cl"
+                          , "line":"26"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

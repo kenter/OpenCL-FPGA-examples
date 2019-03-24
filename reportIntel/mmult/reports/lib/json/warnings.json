@@ -1,0 +1,54 @@
+{"rows":[
+{"name":"unknown attribute 'xcl_array_partition' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":89}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:89:52: warning: unknown attribute 'xcl_array_partition' ignored"]}
+,{"name":"unknown attribute 'xcl_array_partition' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":90}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:90:52: warning: unknown attribute 'xcl_array_partition' ignored"]}
+,{"name":"unknown attribute 'xcl_array_partition' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":91}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:91:52: warning: unknown attribute 'xcl_array_partition' ignored"]}
+,{"name":"unknown attribute 'xcl_loop_tripcount' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":96}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:96:20: warning: unknown attribute 'xcl_loop_tripcount' ignored"]}
+,{"name":"unknown attribute 'xcl_pipeline_loop' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":95}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:95:20: warning: unknown attribute 'xcl_pipeline_loop' ignored"]}
+,{"name":"unknown attribute 'xcl_loop_tripcount' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":104}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:104:20: warning: unknown attribute 'xcl_loop_tripcount' ignored"]}
+,{"name":"unknown attribute 'xcl_pipeline_loop' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":103}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:103:20: warning: unknown attribute 'xcl_pipeline_loop' ignored"]}
+,{"name":"unknown attribute 'xcl_loop_tripcount' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":154}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:154:28: warning: unknown attribute 'xcl_loop_tripcount' ignored"]}
+,{"name":"unknown attribute 'xcl_loop_tripcount' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":152}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:152:24: warning: unknown attribute 'xcl_loop_tripcount' ignored"]}
+,{"name":"unknown attribute 'xcl_loop_tripcount' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":150}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:150:20: warning: unknown attribute 'xcl_loop_tripcount' ignored"]}
+,{"name":"unknown attribute 'xcl_pipeline_loop' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":149}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:149:20: warning: unknown attribute 'xcl_pipeline_loop' ignored"]}
+,{"name":"unknown attribute 'xcl_loop_tripcount' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":175}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:175:20: warning: unknown attribute 'xcl_loop_tripcount' ignored"]}
+,{"name":"unknown attribute 'xcl_pipeline_loop' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+,"line":174}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:174:20: warning: unknown attribute 'xcl_pipeline_loop' ignored"]}
+]}

@@ -1,0 +1,69 @@
+aoc -rtl -report -v -board=p520_max_sg280l -fp-relaxed -fpc device/mmult.cl
+aoc: Environment checks are completed successfully.
+aoc: Cached files in /var/tmp/aocl/ may be used to reduce compilation time
+aoc: Selected target board p520_max_sg280l
+aoc: Running OpenCL parser....
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:89:52: warning: unknown attribute 'xcl_array_partition' ignored
+    int localA[MAX_SIZE][MAX_SIZE]  __attribute__((xcl_array_partition(complete, 1)));;
+                                                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:90:52: warning: unknown attribute 'xcl_array_partition' ignored
+    int localB[MAX_SIZE][MAX_SIZE]  __attribute__((xcl_array_partition(complete, 2)));;
+                                                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:91:52: warning: unknown attribute 'xcl_array_partition' ignored
+    int localC[MAX_SIZE][MAX_SIZE]  __attribute__((xcl_array_partition(complete, 0)));;
+                                                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:96:20: warning: unknown attribute 'xcl_loop_tripcount' ignored
+    __attribute__((xcl_loop_tripcount(c_size*c_size, c_size*c_size)))
+                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:95:20: warning: unknown attribute 'xcl_pipeline_loop' ignored
+    __attribute__((xcl_pipeline_loop(1)))
+                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:104:20: warning: unknown attribute 'xcl_loop_tripcount' ignored
+    __attribute__((xcl_loop_tripcount(c_size*c_size, c_size*c_size)))
+                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:103:20: warning: unknown attribute 'xcl_pipeline_loop' ignored
+    __attribute__((xcl_pipeline_loop(1)))
+                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:154:28: warning: unknown attribute 'xcl_loop_tripcount' ignored
+            __attribute__((xcl_loop_tripcount(c_size, c_size)))
+                           ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:152:24: warning: unknown attribute 'xcl_loop_tripcount' ignored
+        __attribute__((xcl_loop_tripcount(c_size, c_size)))
+                       ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:150:20: warning: unknown attribute 'xcl_loop_tripcount' ignored
+    __attribute__((xcl_loop_tripcount(c_size, c_size)))
+                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:149:20: warning: unknown attribute 'xcl_pipeline_loop' ignored
+    __attribute__((xcl_pipeline_loop(1)))
+                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:175:20: warning: unknown attribute 'xcl_loop_tripcount' ignored
+    __attribute__((xcl_loop_tripcount(c_size*c_size, c_size*c_size)))
+                   ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:174:20: warning: unknown attribute 'xcl_pipeline_loop' ignored
+    __attribute__((xcl_pipeline_loop(1)))
+                   ^
+13 warnings generated.
+aoc: OpenCL parser completed successfully.
+aoc: Linking Object files....
+aoc: Optimizing and doing static analysis of code...
+aoc: Linking with IP library ...
+Checking if memory usage is larger than 100%
+Compiler Warning: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:73: declaring global arguments 'a', 'b' and 'c' with no 'restrict' may lead to low performance for kernel 'mmult'
+
+!===========================================================================
+! The report below may be inaccurate. A more comprehensive           
+! resource usage report can be found at mmult/reports/report.html    
+!===========================================================================
+
++--------------------------------------------------------------------+
+; Estimated Resource Usage Summary                                   ;
++----------------------------------------+---------------------------+
+; Resource                               + Usage                     ;
++----------------------------------------+---------------------------+
+; Logic utilization                      ;   71%                     ;
+; ALUTs                                  ;   37%                     ;
+; Dedicated logic registers              ;   36%                     ;
+; Memory blocks                          ;   33%                     ;
+; DSP blocks                             ;   29%                     ;
++----------------------------------------+---------------------------;
+aoc: First stage compilation completed successfully.

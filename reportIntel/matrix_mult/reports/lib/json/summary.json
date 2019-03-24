@@ -1,0 +1,148 @@
+{
+  "performanceSummary":
+  {
+    "name":"Kernel Summary"
+    , "columns":
+    ["Kernel Name", "Kernel Type", "Autorun", "Workgroup Size", "# Compute Units", "HyperFlex Control Optimizations"]
+    , "children":
+    [
+      {
+        "name":"matrixMult"
+        , "data":
+        [
+          "NDRange"
+          , "No"
+          , [4, 64, 1]
+          , 1
+          , "Off"
+        ]
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Kernel type: NDRange"
+          }
+          , {
+            "type":"text"
+            , "text":"Required workgroup size: (4, 64, 1)"
+          }
+          , {
+            "type":"text"
+            , "text":"Maximum workgroup size: 256"
+          }
+          , {
+            "type":"text"
+            , "text":"Stall latency disabled due to loop orchestration compiler optimization is disabled in loop matrixMult.B2."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/matrix_mult.cl"
+              , "line":108
+            }
+          ]
+        ]
+      }
+    ]
+  }
+  , "estimatedResources":
+  {
+    "name":"Estimated Resource Usage"
+    , "columns":
+    ["Kernel Name", "ALUTs ", "FFs  ", "RAMs ", "DSPs ", "MLABs"]
+    , "children":
+    [
+      {
+        "name":"matrixMult"
+        , "data":
+        [40150.3, 243802, 1276, 1030.5, 840]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/matrix_mult.cl"
+              , "line":108
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Global Interconnect"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [13691, 19807, 78, 0, 0]
+      }
+      , {
+        "name":"Board Interface"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [480580, 961160, 2766, 1292, 0]
+      }
+      , {
+        "name":"Total"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [534423, 1224840, 4122, 2322, 840]
+        , "data_percent":
+        [38.5681, 44.197, 46.0302, 51.9919, 81.091]
+      }
+      , {
+        "name":"Available"
+        , "classes":
+        ["summary-highlight", "nohover"]
+        , "data":
+        [1385660, 2771320, 8955, 4468, 0]
+      }
+    ]
+  }
+  , "compileWarnings":
+  {
+    "name":"Compile Warnings"
+    , "children":
+    [
+      {
+        "name":"Load uses a Burst-coalesced non-aligned cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/matrix_mult.cl"
+              , "line":144
+            }
+          ]
+        ]
+      }
+      , {
+        "name":"Load uses a Burst-coalesced non-aligned cached LSU"
+        , "details":
+        [
+          {
+            "type":"text"
+            , "text":"Load with a private 512 kilobit cache. Cache is not shared with any other load. It is flushed on kernel start. Use Dynamic Profiler to verify cache effectiveness. Other kernels should not be updating the data in global memory while this kernel is using it. Cache is created when memory access pattern is data-dependent or appears to be repetitive. Simplify access pattern or mark pointer as 'volatile' to disable generation of this cache."
+          }
+        ]
+        , "debug":
+        [
+          [
+            {
+              "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/matrix_mult.cl"
+              , "line":145
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

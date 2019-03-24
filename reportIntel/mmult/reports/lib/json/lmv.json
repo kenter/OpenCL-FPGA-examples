@@ -1,0 +1,1269 @@
+{
+  "nodes":
+  [
+    {
+      "type":"kernel"
+      , "id":2
+      , "name":"mmult"
+      , "children":
+      [
+        {
+          "type":"inst"
+          , "id":15
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":99
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Local-pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Stores to":"localA"
+              , "Start Cycle":"241"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":17
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":107
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Local-pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Stores to":"localB"
+              , "Start Cycle":"241"
+              , "Latency":"1"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":18
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":158
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"localC"
+              , "Start Cycle":"14"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":19
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":158
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"localC"
+              , "Start Cycle":"14"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":20
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":158
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Loads from":"localC"
+              , "Start Cycle":"14"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":21
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":163
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Type":"Local-pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"localB"
+              , "Start Cycle":"54"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":22
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":163
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Type":"Local-pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"localB"
+              , "Start Cycle":"54"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":23
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":163
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Type":"Local-pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"localB"
+              , "Start Cycle":"54"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":24
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":162
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Local-pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"localA"
+              , "Start Cycle":"54"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":25
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":167
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"localC"
+              , "Start Cycle":"73"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":26
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":167
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"localC"
+              , "Start Cycle":"73"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":27
+          , "name":"Store"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":167
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"128 bits"
+              , "Type":"Local-pipelined"
+              , "Stall-free":"No"
+              , "Stores to":"localC"
+              , "Start Cycle":"73"
+              , "Latency":"31"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"inst"
+          , "id":28
+          , "name":"Load"
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":178
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Width":"32 bits"
+              , "Type":"Local-pipelined never-stall"
+              , "Stall-free":"Yes"
+              , "Loads from":"localC"
+              , "Start Cycle":"9"
+              , "Latency":"4"
+              , "Reference":
+              [
+                {
+                  "type":"text"
+                  , "text":"See %L for more information"
+                  , "links":
+                  [
+                    {
+                      "guide":"Best Practices Guide : Load-Store Units"
+                      , "link":"https://www.altera.com/documentation/mwh1391807516407.html#yeo1491314105959"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"memtype"
+          , "id":38
+          , "name":"Local Memory"
+          , "children":
+          [
+            {
+              "type":"memsys"
+              , "id":39
+              , "name":"localA"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                    , "line":89
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":40
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                        , "line":89
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":41
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":42
+                      , "name":"W"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n1 read ports/bank\n1 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"1"
+                      , "Number of write ports per bank":"1"
+                      , "Total replication":"1"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"576B requested\n1024B implemented"
+                    }
+                  ]
+                  , "Requested size":"576 bytes"
+                  , "Implemented size":"1024 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"32 bits"
+                  , "Bank depth":"256 words"
+                  , "Total replication":"1"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"memsys"
+              , "id":43
+              , "name":"localB"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                    , "line":90
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":44
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                        , "line":90
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":45
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":46
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":47
+                      , "name":"R"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":48
+                      , "name":"W"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"4 total ports/bank\n3 read ports/bank\n1 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"4"
+                      , "Number of read ports per bank":"3"
+                      , "Number of write ports per bank":"1"
+                      , "Total replication":"3"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"576B requested\n3072B implemented"
+                    }
+                  ]
+                  , "Requested size":"576 bytes"
+                  , "Implemented size":"3072 bytes"
+                  , "Number of banks":"1"
+                  , "Bank width":"128 bits"
+                  , "Bank depth":"64 words"
+                  , "Total replication":"3"
+                  , "Additional Information":"Replicated 3 times to efficiently support multiple accesses"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"memsys"
+              , "id":49
+              , "name":"localC"
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                    , "line":91
+                  }
+                ]
+              ]
+              , "children":
+              [
+                {
+                  "type":"bank"
+                  , "id":50
+                  , "name":"Bank 0"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                        , "line":91
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":54
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":62
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"1"
+                    }
+                  ]
+                }
+                , {
+                  "type":"bank"
+                  , "id":51
+                  , "name":"Bank 1"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                        , "line":91
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":56
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":64
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"1"
+                    }
+                  ]
+                }
+                , {
+                  "type":"bank"
+                  , "id":52
+                  , "name":"Bank 2"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                        , "line":91
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":58
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":66
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"1"
+                    }
+                  ]
+                }
+                , {
+                  "type":"bank"
+                  , "id":53
+                  , "name":"Bank 3"
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                        , "line":91
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "type":"port"
+                      , "id":60
+                      , "name":"RW"
+                    }
+                    , {
+                      "type":"port"
+                      , "id":68
+                      , "name":"RW"
+                    }
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"table"
+                      , "details":
+                      [
+                        {
+                          "type":"brief"
+                          , "text":"2 total ports/bank\n0 read ports/bank\n0 write ports/bank"
+                        }
+                      ]
+                      , "Total number of ports per bank":"2"
+                      , "Number of read ports per bank":"0"
+                      , "Number of write ports per bank":"0"
+                      , "Number of shared ports per bank":"2"
+                      , "Total replication":"1"
+                    }
+                  ]
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"table"
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"576B requested\n1024B implemented"
+                    }
+                  ]
+                  , "Requested size":"576 bytes"
+                  , "Implemented size":"1024 bytes"
+                  , "Number of banks":"4"
+                  , "Bank width":"128 bits"
+                  , "Bank depth":"16 words"
+                  , "Total replication":"1"
+                  , "Reference":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"See %L for more information"
+                      , "links":
+                      [
+                        {
+                          "guide":"Best Practices Guide : Local Memory"
+                          , "link":"https://www.altera.com/documentation/mwh1391807516407.html#chn1469549457114"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":55
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":57
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":59
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":61
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":63
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":65
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":67
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+        , {
+          "type":"arb"
+          , "id":69
+          , "name":"ARB"
+          , "details":
+          [
+            {
+              "type":"table"
+              , "Additional Information":"Competing accesses leading to stalls"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  , "links":
+  [
+    {
+      "from":41
+      , "to":24
+    }
+    , {
+      "from":15
+      , "to":42
+    }
+    , {
+      "from":45
+      , "to":21
+    }
+    , {
+      "from":46
+      , "to":22
+    }
+    , {
+      "from":47
+      , "to":23
+    }
+    , {
+      "from":17
+      , "to":48
+    }
+    , {
+      "from":55
+      , "to":18
+    }
+    , {
+      "from":55
+      , "to":20
+    }
+    , {
+      "from":26
+      , "to":55
+    }
+    , {
+      "from":55
+      , "to":54
+    }
+    , {
+      "from":54
+      , "to":55
+    }
+    , {
+      "from":57
+      , "to":18
+    }
+    , {
+      "from":57
+      , "to":20
+    }
+    , {
+      "from":26
+      , "to":57
+    }
+    , {
+      "from":57
+      , "to":56
+    }
+    , {
+      "from":56
+      , "to":57
+    }
+    , {
+      "from":59
+      , "to":18
+    }
+    , {
+      "from":59
+      , "to":20
+    }
+    , {
+      "from":26
+      , "to":59
+    }
+    , {
+      "from":59
+      , "to":58
+    }
+    , {
+      "from":58
+      , "to":59
+    }
+    , {
+      "from":61
+      , "to":18
+    }
+    , {
+      "from":61
+      , "to":20
+    }
+    , {
+      "from":26
+      , "to":61
+    }
+    , {
+      "from":61
+      , "to":60
+    }
+    , {
+      "from":60
+      , "to":61
+    }
+    , {
+      "from":63
+      , "to":19
+    }
+    , {
+      "from":25
+      , "to":63
+    }
+    , {
+      "from":27
+      , "to":63
+    }
+    , {
+      "from":63
+      , "to":28
+    }
+    , {
+      "from":63
+      , "to":62
+    }
+    , {
+      "from":62
+      , "to":63
+    }
+    , {
+      "from":65
+      , "to":19
+    }
+    , {
+      "from":25
+      , "to":65
+    }
+    , {
+      "from":27
+      , "to":65
+    }
+    , {
+      "from":65
+      , "to":28
+    }
+    , {
+      "from":65
+      , "to":64
+    }
+    , {
+      "from":64
+      , "to":65
+    }
+    , {
+      "from":67
+      , "to":19
+    }
+    , {
+      "from":25
+      , "to":67
+    }
+    , {
+      "from":27
+      , "to":67
+    }
+    , {
+      "from":67
+      , "to":28
+    }
+    , {
+      "from":67
+      , "to":66
+    }
+    , {
+      "from":66
+      , "to":67
+    }
+    , {
+      "from":69
+      , "to":19
+    }
+    , {
+      "from":25
+      , "to":69
+    }
+    , {
+      "from":27
+      , "to":69
+    }
+    , {
+      "from":69
+      , "to":28
+    }
+    , {
+      "from":69
+      , "to":68
+    }
+    , {
+      "from":68
+      , "to":69
+    }
+  ]
+}

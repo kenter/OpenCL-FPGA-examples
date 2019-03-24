@@ -1,0 +1,1014 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "MLABs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [70.4537, 36.5339, 36.0837, 33.0318, 29.2972]
+  , "total":
+  [505936, 999995, 2958, 1309, 15]
+  , "name":"Kernel System"
+  , "max_resources":
+  [1385660, 2771320, 8955, 4468, 69283]
+  , "children":
+  [
+    {
+      "name":"Static Partition"
+      , "type":"partition"
+      , "children":
+      [
+        {
+          "name":"Board interface"
+          , "type":"resource"
+          , "data":
+          [480580, 961160, 2766, 1292, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Platform interface logic."
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [19892, 24000, 104, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 2 global loads and 2 global stores. Reduce number of global loads and stores to simplify global interconnect."
+        }
+        , {
+          "type":"brief"
+          , "text":"For 2 global loads and 2 global stores."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"https://www.altera.com/documentation/mwh1391807516407.html#hnj1476724450050"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"System description ROM"
+      , "type":"resource"
+      , "data":
+      [2, 71, 2, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"This read-only memory contains information for the host about the system and about each kernel in the system, including kernel names, arguments, and attributes.  The system description ROM ensures that the binary image on the FPGA is compatible with the host program."
+        }
+        , {
+          "type":"brief"
+          , "text":"Contains information for the host."
+        }
+      ]
+    }
+    , {
+      "name":"vscale"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [0.936146, 0.415831, 0.532743, 0.960357, 0.380483]
+      , "total_kernel_resources":
+      [5462, 14764, 86, 17, 15]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+        , {
+          "type":"brief"
+          , "text":"1 compute unit."
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1463, 1467, 0, 0, 6]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+            , {
+              "type":"brief"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (vscale4_u16_epi.cl:13)"
+          , "type":"resource"
+          , "data":
+          [24, 64, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                , "line":13
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 32 width"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'i' (vscale4_u16_epi.cl:18)"
+          , "type":"resource"
+          , "data":
+          [24, 64, 0, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                , "line":18
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32"
+            }
+            , {
+              "type":"brief"
+              , "text":"Register,\n1 reg, 32 width"
+            }
+          ]
+        }
+        , {
+          "name":"vscale.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [0, 92, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [0, 29, 0, 0, 0]
+                }
+                , {
+                  "name":"vscale4_u16_epi.cl:10"
+                  , "type":"resource"
+                  , "data":
+                  [0, 32, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"vscale4_u16_epi.cl:13"
+                  , "type":"resource"
+                  , "data":
+                  [0, 30, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":13
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"vscale4_u16_epi.cl:14"
+                  , "type":"resource"
+                  , "data":
+                  [0, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":14
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [24, 39, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"vscale4_u16_epi.cl:10"
+                  , "type":"resource"
+                  , "data":
+                  [32, 0, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":10
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"vscale4_u16_epi.cl:13"
+                  , "type":"resource"
+                  , "data":
+                  [35, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":13
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"vscale.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [1, 266, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [1, 230, 0, 0, 0]
+                }
+                , {
+                  "name":"vscale4_u16_epi.cl:16"
+                  , "type":"resource"
+                  , "data":
+                  [0, 33, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":16
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"vscale4_u16_epi.cl:18"
+                  , "type":"resource"
+                  , "data":
+                  [0, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":18
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"vscale4_u16_epi.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [0, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [24, 39, 0, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"vscale4_u16_epi.cl:16"
+                  , "type":"resource"
+                  , "data":
+                  [228, 33, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":16
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [64, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [64, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 32, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"vscale4_u16_epi.cl:18"
+                  , "type":"resource"
+                  , "data":
+                  [67, 1, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":18
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"vscale.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [81, 896, 5, 0, 4]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [81, 896, 5, 0, 4]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [48, 41, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"vscale4_u16_epi.cl:13"
+                  , "type":"resource"
+                  , "data":
+                  [48, 41, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":13
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [450, 786, 17, 0, 2]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"vscale4_u16_epi.cl:13"
+                  , "type":"resource"
+                  , "data":
+                  [70, 2, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":13
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"1-bit Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [1, 1, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [35, 1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"vscale4_u16_epi.cl:14"
+                  , "type":"resource"
+                  , "data":
+                  [1562, 6174, 30, 16, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":14
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Hardened Floating-point Multiply"
+                      , "type":"resource"
+                      , "count":16
+                      , "data":
+                      [768, 1536, 0, 16, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [425, 1957, 13, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [369, 2681, 17, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced write-ack LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced write-ack LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"vscale.B4"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [34, 209, 1, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Live values and control logic"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [34, 209, 1, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [57, 75, 0, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Loop-carried dependencies"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"vscale4_u16_epi.cl:18"
+                  , "type":"resource"
+                  , "data":
+                  [57, 75, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":18
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [178, 242, 4, 0, 1]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"vscale4_u16_epi.cl:18"
+                  , "type":"resource"
+                  , "data":
+                  [137, 32, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":18
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"1-bit And"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [2, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [32, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [32, 32, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [11, 0, 0, 0, 0]
+                    }
+                    , {
+                      "name":"33-bit Select"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [27, 0, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"vscale4_u16_epi.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [923, 4241, 29, 1, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"Hardened Floating-point Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [48, 96, 0, 1, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [485, 2017, 13, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [390, 2128, 16, 0, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                        , {
+                          "type":"brief"
+                          , "text":"Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

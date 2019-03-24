@@ -1,0 +1,435 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Bottleneck", "Details"]
+  , "children":
+  [
+    {
+      "name":"Kernel: mmult"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+            , "line":73
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Kernels"
+              , "link":"https://www.altera.com/documentation/mwh1391807516407.html#ipp1476408832230"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"mmult.B2"
+          , "data":
+          ["Yes", "~1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":97
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Loop orchestration compiler optimization is enabled."
+            }
+            , {
+              "type":"brief"
+              , "text":"II is an approximation."
+            }
+            , {
+              "type":"text"
+              , "text":"II is an approximation due to the following stallable instruction:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                      , "line":"99"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+        , {
+          "name":"mmult.B4"
+          , "data":
+          ["Yes", "~1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":105
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Loop orchestration compiler optimization is enabled."
+            }
+            , {
+              "type":"brief"
+              , "text":"II is an approximation."
+            }
+            , {
+              "type":"text"
+              , "text":"II is an approximation due to the following stallable instruction:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                      , "line":"107"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+        , {
+          "name":"mmult.B6"
+          , "data":
+          ["Yes", ">=1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":151
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Iteration executed serially across mmult.B7. Only a single loop iteration will execute inside this region due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                      , "line":"158"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                      , "line":"167"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Iteration executed serially across mmult.B7. Only a single loop iteration will execute inside this region due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                      , "line":"158"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                      , "line":"167"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"text"
+              , "text":"Iteration executed serially across mmult.B7. Only a single loop iteration will execute inside this region due to memory dependency:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"From: Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                      , "line":"158"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"To: Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                      , "line":"167"
+                    }
+                  ]
+                }
+              ]
+            }
+            , {
+              "type":"brief"
+              , "text":"Serial exe: Memory dependency"
+            }
+            , {
+              "type":"text"
+              , "text":"See %L for more information"
+              , "links":
+              [
+                {
+                  "guide":"Best Practices Guide : Nested Loops"
+                  , "link":"https://www.altera.com/documentation/mwh1391807516407.html#rfr1469543500580"
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+            {
+              "name":"mmult.B7"
+              , "data":
+              ["Yes", "~1", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                    , "line":153
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Loop orchestration compiler optimization is enabled."
+                }
+                , {
+                  "type":"brief"
+                  , "text":"II is an approximation."
+                }
+                , {
+                  "type":"text"
+                  , "text":"II is an approximation due to the following stallable instructions:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"Load Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                          , "line":"158"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Load Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                          , "line":"158"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Load Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                          , "line":"158"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Store Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                          , "line":"167"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Store Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                          , "line":"167"
+                        }
+                      ]
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Store Operation (%L)"
+                      , "links":
+                      [
+                        {
+                          "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                          , "line":"167"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"Fully unrolled loop"
+                  , "data":
+                  ["n/a", "n/a", "n/a"]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                        , "line":155
+                      }
+                    ]
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"Auto-unrolled"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Auto-unrolled"
+                    }
+                  ]
+                  , "children":
+                  [
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"mmult.B10"
+          , "data":
+          ["Yes", "~1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                , "line":176
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Loop orchestration compiler optimization is enabled."
+            }
+            , {
+              "type":"brief"
+              , "text":"II is an approximation."
+            }
+            , {
+              "type":"text"
+              , "text":"II is an approximation due to the following stallable instruction:"
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl"
+                      , "line":"178"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{"rows":[
+{"name":"unknown attribute 'xcl_dataflow' ignored"
+,"debug":[[{"filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY4_dataflow.cl"
+,"line":13}]]
+,"details":["/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY4_dataflow.cl:13:20: warning: unknown attribute 'xcl_dataflow' ignored"]}
+]}

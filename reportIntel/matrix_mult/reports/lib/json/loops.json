@@ -1,0 +1,102 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Bottleneck", "Details"]
+  , "children":
+  [
+    {
+      "name":"Kernel: matrixMult"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/matrix_mult.cl"
+            , "line":108
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"ND-Range"
+        }
+        , {
+          "type":"text"
+          , "text":"ND-Range"
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Kernels"
+              , "link":"https://www.altera.com/documentation/mwh1391807516407.html#ipp1476408832230"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"matrixMult.B2"
+          , "data":
+          ["No", "n/a", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/matrix_mult.cl"
+                , "line":136
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":"Thread capacity = 1024"
+            }
+            , {
+              "type":"text"
+              , "text":"Thread capacity = 1024"
+            }
+          ]
+          , "children":
+          [
+            {
+              "name":"Fully unrolled loop"
+              , "data":
+              ["n/a", "n/a", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/matrix_mult.cl"
+                    , "line":158
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+              ]
+              , "children":
+              [
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
