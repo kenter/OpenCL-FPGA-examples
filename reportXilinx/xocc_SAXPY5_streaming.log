@@ -1,0 +1,26 @@
+Attempting to get a license: ap_opencl
+INFO: [XOCC 17-1540] The version limit for your license is '2018.12' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Feature available: ap_opencl
+INFO: [XOCC 60-1306] Additional information associated with this xocc compile can be found at:
+	Reports: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/reports/SAXPY5_streaming
+	Log files: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/logs/SAXPY5_streaming
+INFO: [XOCC 60-585] Compiling for hardware target
+INFO: [XOCC 60-895]   Target platform: /opt/Xilinx/SDx/2018.3/platforms/alpha-data_adm-pcie-8k5_dynamic_5_0/alpha-data_adm-pcie-8k5_dynamic_5_0.xpfm
+INFO: [XOCC 60-423]   Target device: alpha-data_adm-pcie-8k5_dynamic_5_0
+INFO: [XOCC 60-242] Creating kernel: 'readY'
+INFO: [XOCC 60-242] Creating kernel: 'SAXPY'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: SAXPY Log file: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/SAXPY5_streaming/SAXPY/vivado_hls.log :
+INFO: [XOCC 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [XOCC 204-61] Pipelining loop 'XCL_WG_DIM_Z_XCL_WG_DIM_Y_XCL_WG_DIM_X.1'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 161.
+
+===>The following messages were generated while  performing high-level synthesis for kernel: readY Log file: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/SAXPY5_streaming/readY/vivado_hls.log :
+INFO: [XOCC 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [XOCC 204-61] Pipelining loop 'XCL_WG_DIM_Z_XCL_WG_DIM_Y_XCL_WG_DIM_X.1'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 74.
+INFO: [XOCC 60-594] Finished kernel compilation
+INFO: [XOCC 60-244] Generating system estimate report...
+INFO: [XOCC 60-1092] Generated system estimate report: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/reports/SAXPY5_streaming/system_estimate_SAXPY5_streaming.xtxt
+INFO: [XOCC 60-586] Created SAXPY5_streaming.xo
+INFO: [XOCC 60-791] Total elapsed time: 0h 1m 12s

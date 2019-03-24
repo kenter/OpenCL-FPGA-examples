@@ -1,0 +1,39 @@
+===============================================================================
+Version:    xocc v2018.3 (64-bit)
+Build:      SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+Copyright:  Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Mar 24 18:37:56 2019
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             vscale4_u16_epi
+Target Device:           alpha-data:adm-pcie-8k5:dynamic:5.0
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library   Compute Units
+-----------  ----  ------------------  ---------------  -------------
+vscale       clc   fpga0:OCL_REGION_0  vscale4_u16_epi  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     vscale4_u16_epi
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name  Target Frequency  Estimated Frequency
+------------  -----------  -----------  ----------------  -------------------
+vscale_1      vscale       vscale       300.300293        411.015198
+
+Latency Information (clock cycles)
+Compute Unit  Kernel Name  Module Name  Start Interval  Best Case  Avg Case  Worst Case
+------------  -----------  -----------  --------------  ---------  --------  ----------
+vscale_1      vscale       vscale       undef           undef      undef     undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name  FF    LUT    DSP  BRAM
+------------  -----------  -----------  ----  -----  ---  ----
+vscale_1      vscale       vscale       8196  10177  48   32
+-------------------------------------------------------------------------------

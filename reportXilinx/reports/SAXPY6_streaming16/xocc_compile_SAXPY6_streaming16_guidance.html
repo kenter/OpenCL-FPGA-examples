@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<title>Design Guidance Report</title>
+<link rel="stylesheet" href="file:///opt/Xilinx/SDx/2018.3/data/rulecheck/rulecheck.css">
+<script type="text/javascript" src="file:///opt/Xilinx/SDx/2018.3/data/rulecheck/rulecheck.js"></script>
+</head><body>
+<center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
+<tr><td><b>Copyright</b></td><td>Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.</td></tr>
+<tr><td><b>Tool Version</b></td><td>xrcserver v.2018.3 (lin64) Build 0 </td></tr>
+<tr><td><b>Date</b></td><td>Sun Mar 24 18:37:42 2019</td></tr>
+<tr><td><b>Host</b></td><td>fe-1.cc.pc2.uni-paderborn.de running 64-bit CentOS Linux release 7.3.1611 (Core)</td></tr>
+<tr><td><b>Command</b></td><td>xocc  -g -R 2 -s --platform=alpha-data_adm-pcie-8k5_dynamic_5_0 --memory_port_data_width all:512 -c device/SAXPY6_streaming16.cl -o SAXPY6_streaming16.xo </td></tr>
+</table></center><br>
+<table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
+<tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
+<tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
+</table>
+<a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
+<pre>Violations found: 11
+</pre>
+<pre>Rule Specs Violated: 4
+</pre>
+<a name="VIOLATION DETAILS"></a><h1>2 VIOLATION DETAILS</h1>
+<table border="1">
+<caption>Items that may require attention</caption>
+<tr class="ns-sort">
+<th align="left">Id</th>
+<th align="left">Name</th>
+<th align="left">Severity</th>
+<th align="left" width="170">Full Name</th>
+<th align="left">Categories</th>
+<th align="left" width="350">Details</th>
+<th align="left" width="380">Resolution</th>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.SAXPY.Interface</td>
+<td align="left">Burst read of variable length and width 512 has been inferred on 'gmem' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples<a href="file:///device/SAXPY6_streaming16.cl#line=23">SAXPY6_streaming16.cl</a>)
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.SAXPY.Interface</td>
+<td align="left">Burst write of variable length and width 512 has been inferred on 'gmem' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples<a href="file:///device/SAXPY6_streaming16.cl#line=23">SAXPY6_streaming16.cl</a>)
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">Loop</td>
+<td align="left">WARNING</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.readY.Loop</td>
+<td align="left">Cannot flatten a loop nest 'XCL_WG_DIM_X' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples<a href="file:///device/SAXPY6_streaming16.cl#line=10">SAXPY6_streaming16.cl</a>) in function 'readY' : 
+
+the outer loop is not a perfect loop.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">Kernel</td>
+<td align="left">WARNING</td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.readY.Kernel</td>
+<td align="left">Estimated clock period (2.477ns) exceeds the target (target clock period: 3.333ns, clock uncertainty: 0.9ns, effective delay budget: 2.433ns).
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">Kernel</td>
+<td align="left">WARNING</td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.readY.Kernel</td>
+<td align="left">The critical path in module 'readY' consists of the following:
+	s_axi read on port 'size16' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples<a href="file:///device/SAXPY6_streaming16.cl#line=7">SAXPY6_streaming16.cl</a>) [22]  (1 ns)
+	'icmp' operation ('cmp1', /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples<a href="file:///device/SAXPY6_streaming16.cl#line=10">SAXPY6_streaming16.cl</a>) [27]  (1.14 ns)
+	blocking operation 0.337 ns on control path)
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">Loop</td>
+<td align="left">WARNING</td>
+<td align="left">HLS Loop Related</td>
+<td align="left">Accelerator.SAXPY.Loop</td>
+<td align="left">Cannot flatten a loop nest 'XCL_WG_DIM_X' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples<a href="file:///device/SAXPY6_streaming16.cl#line=23">SAXPY6_streaming16.cl</a>) in function 'SAXPY' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">General</td>
+<td align="left">ADVISORY</td>
+<td align="left">HLS General Related</td>
+<td align="left">Accelerator.readY.General</td>
+<td align="left">Only 1 loops out of a total 2 loops have been pipelined in this design.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">Kernel</td>
+<td align="left">WARNING</td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.SAXPY.Kernel</td>
+<td align="left">Estimated clock period (3.103ns) exceeds the target (target clock period: 3.333ns, clock uncertainty: 0.9ns, effective delay budget: 2.433ns).
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">10</td>
+<td align="left">Kernel</td>
+<td align="left">WARNING</td>
+<td align="left">HLS Kernel Related</td>
+<td align="left">Accelerator.SAXPY.Kernel</td>
+<td align="left">The critical path in module 'SAXPY' consists of the following:
+	'sitofp' operation ('conv') [37]  (3.1 ns)
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">General</td>
+<td align="left">ADVISORY</td>
+<td align="left">HLS General Related</td>
+<td align="left">Accelerator.SAXPY.General</td>
+<td align="left">Only 1 loops out of a total 2 loops have been pipelined in this design.
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.readY.Interface</td>
+<td align="left">Burst read of variable length and width 512 has been inferred on 'gmem' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples<a href="file:///device/SAXPY6_streaming16.cl#line=10">SAXPY6_streaming16.cl</a>)
+</td>
+<td align="left">Consult the <a href="http://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug902-vivado-high-level-synthesis.pdf">Vivado HLS User Guide (UG902)</a>.</td>
+</tr>
+</table>
+<br>
+</body></html>

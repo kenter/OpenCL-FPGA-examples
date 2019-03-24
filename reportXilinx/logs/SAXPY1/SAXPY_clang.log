@@ -1,0 +1,5 @@
+In file included from /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY1.cl:1:
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/macros.h:2:26: warning: unknown OpenCL extension 'cl_intel_channels' - ignoring [-Wignored-pragmas]
+#pragma OPENCL EXTENSION cl_intel_channels : enable
+                         ^
+1 warning generated.

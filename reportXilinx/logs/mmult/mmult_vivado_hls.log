@@ -1,0 +1,123 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'kenter' on host 'fe-1.cc.pc2.uni-paderborn.de' (Linux_x86_64 version 3.10.0-693.17.1.el7.x86_64) on Sun Mar 24 18:35:35 CET 2019
+INFO: [HLS 200-10] On os "CentOS Linux release 7.3.1611 (Core) "
+INFO: [HLS 200-10] In directory '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/mmult/mmult'
+INFO: [HLS 200-10] Creating and opening project '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/mmult/mmult/mmult'.
+INFO: [HLS 200-10] Adding design file '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl' to the project
+INFO: [HLS 200-10] Creating and opening solution '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/mmult/mmult/mmult/solution'.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flva1517-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -profile' configuration: config_rtl -stall_sig_gen=1
+INFO: [HLS 200-435] Setting 'config_sdx -profile' configuration: config_rtl -profile=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -pipeline_loops=64
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -name_max_length=256
+INFO: [XFORM 203-1161] The maximum of name length is set into 256.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -enable_dsp_full_reg=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -enable_maxiConservative=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_interface -m_axi_addr64=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [HLS 200-10] Starting synthesis with clang3.9 flow ...
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl' ... 
+WARNING: [HLS 200-40] clang: warning: argument unused during compilation: '--gcc-toolchain=/opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc' [-Wunused-command-line-argument]
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 554.328 ; gain = 0.000 ; free physical = 220689 ; free virtual = 250217
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 554.328 ; gain = 0.000 ; free physical = 220689 ; free virtual = 250217
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 554.328 ; gain = 0.000 ; free physical = 220664 ; free virtual = 250192
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 554.328 ; gain = 0.000 ; free physical = 220664 ; free virtual = 250192
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'systolic1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:151) in function 'mmult' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'systolic2' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:153) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'systolic2' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:153) in function 'mmult' completely with a factor of 12.
+INFO: [XFORM 203-101] Partitioning array 'localA' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:89) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'localB' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:90) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'localC' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:91) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'localC' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:91) in dimension 2 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:151:24) in function 'mmult'... converting 577 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 659.172 ; gain = 104.844 ; free physical = 220609 ; free virtual = 250137
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 659.172 ; gain = 104.844 ; free physical = 220586 ; free virtual = 250114
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'mmult' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'readA'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 74.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'icmp' operation ('cmp1') to 'add' operation ('j') (combination delay: 3.066 ns) to honor II or Latency constraint in region 'readA'.
+INFO: [SCHED 204-61] Pipelining loop 'readB'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 74.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'icmp' operation ('cmp3') to 'add' operation ('j') (combination delay: 3.066 ns) to honor II or Latency constraint in region 'readB'.
+INFO: [SCHED 204-61] Pipelining loop 'systolic1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
+INFO: [SCHED 204-61] Pipelining loop 'writeC'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 73.
+WARNING: [SCHED 204-70] Cannot meet target clock period from 'icmp' operation ('cmp8') to 'add' operation ('j') (combination delay: 3.066 ns) to honor II or Latency constraint in region 'writeC'.
+WARNING: [SCHED 204-21] Estimated clock period (3.066ns) exceeds the target (target clock period: 3.333ns, clock uncertainty: 0.9ns, effective delay budget: 2.433ns).
+WARNING: [SCHED 204-21] The critical path in module 'mmult' consists of the following:
+	'phi' operation ('j') with incoming values : ('j', /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:97) [60]  (0 ns)
+	'icmp' operation ('cmp1', /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:98) [69]  (1.14 ns)
+	'select' operation ('j', /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:98) [71]  (0.44 ns)
+	'add' operation ('j', /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:97) [140]  (1.49 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 14.68 seconds; current allocated memory: 80.406 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.35 seconds; current allocated memory: 89.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'mmult' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/a' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/b' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/c' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/a_row' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/a_col' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'mmult/b_col' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'mmult' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'b', 'c', 'a_row', 'a_col' and 'b_col' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mmult_mul_32s_32s_32_5_1': 147 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mmult_mux_1448_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'mmult'.
+INFO: [HLS 200-111]  Elapsed time: 3.33 seconds; current allocated memory: 103.027 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'mmult_mmult_mul_32s_32s_32_5_1_MulnS_0'
+INFO: [RTMG 210-278] Implementing memory 'mmult_mmult_localA_0_ram (RAM)' using distributed RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 731.176 ; gain = 176.848 ; free physical = 219998 ; free virtual = 249562
+INFO: [SYSC 207-301] Generating SystemC RTL for mmult with prefix mmult_.
+INFO: [VHDL 208-304] Generating VHDL RTL for mmult with prefix mmult_.
+INFO: [VLOG 209-307] Generating Verilog RTL for mmult with prefix mmult_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-1460] Use of init.tcl in /upb/departments/pc2/users/k/kenter/.Xilinx/Vivado/init.tcl is deprecated. Please use Vivado_init.tcl 
+Sourcing tcl script '/upb/departments/pc2/users/k/kenter/.Xilinx/Vivado/init.tcl'
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 24 18:36:26 2019...
+Vivado HLS completed successfully
+INFO: [HLS 200-112] Total elapsed time: 51.21 seconds; peak allocated memory: 103.027 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Mar 24 18:36:26 2019...

@@ -1,0 +1,19 @@
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:97:5: warning: unused label 'readA' [-Wunused-label]
+    readA: for(int loc = 0, i = 0, j = 0; loc < a_row*a_col; loc++, j++) {
+    ^~~~~~~
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:105:5: warning: unused label 'readB' [-Wunused-label]
+    readB: for(int loc = 0, i = 0, j = 0; loc < b_row*b_col; loc++, j++) {
+    ^~~~~~~
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:155:13: warning: unused label 'systolic3' [-Wunused-label]
+            systolic3: for(int j = 0; j < MAX_SIZE; j++) {
+            ^~~~~~~~~~~
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:153:9: warning: unused label 'systolic2' [-Wunused-label]
+        systolic2: for(int i = 0; i < MAX_SIZE; i++) {
+        ^~~~~~~~~~~
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:151:5: warning: unused label 'systolic1' [-Wunused-label]
+    systolic1: for(int k = 0; k < a_col; k++) {
+    ^~~~~~~~~~~
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/mmult.cl:176:5: warning: unused label 'writeC' [-Wunused-label]
+    writeC: for(int loc = 0, i = 0, j = 0; loc < c_row*c_col; loc++, j++) {
+    ^~~~~~~~
+6 warnings generated.

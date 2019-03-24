@@ -1,0 +1,39 @@
+===============================================================================
+Version:    xocc v2018.3 (64-bit)
+Build:      SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+Copyright:  Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Mar 24 18:36:29 2019
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             SAXPY1
+Target Device:           alpha-data:adm-pcie-8k5:dynamic:5.0
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+SAXPY        clc   fpga0:OCL_REGION_0  SAXPY1          1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     SAXPY1
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name  Target Frequency  Estimated Frequency
+------------  -----------  -----------  ----------------  -------------------
+SAXPY_1       SAXPY        SAXPY        300.300293        322.268768
+
+Latency Information (clock cycles)
+Compute Unit  Kernel Name  Module Name  Start Interval  Best Case  Avg Case  Worst Case
+------------  -----------  -----------  --------------  ---------  --------  ----------
+SAXPY_1       SAXPY        SAXPY        2 ~ 0           1          undef     undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name  FF    LUT    DSP  BRAM
+------------  -----------  -----------  ----  -----  ---  ----
+SAXPY_1       SAXPY        SAXPY        5069  10574  5    30
+-------------------------------------------------------------------------------

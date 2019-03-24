@@ -1,0 +1,39 @@
+===============================================================================
+Version:    xocc v2018.3 (64-bit)
+Build:      SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+Copyright:  Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Mar 24 18:37:45 2019
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             matrix_mult
+Target Device:           alpha-data:adm-pcie-8k5:dynamic:5.0
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+matrixMult   clc   fpga0:OCL_REGION_0  matrix_mult     1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     matrix_mult
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name  Target Frequency  Estimated Frequency
+------------  -----------  -----------  ----------------  -------------------
+matrixMult_1  matrixMult   matrixMult   300.300293        331.455078
+
+Latency Information (clock cycles)
+Compute Unit  Kernel Name  Module Name  Start Interval  Best Case  Avg Case  Worst Case
+------------  -----------  -----------  --------------  ---------  --------  ----------
+matrixMult_1  matrixMult   matrixMult   undef           undef      undef     undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name  FF      LUT     DSP  BRAM
+------------  -----------  -----------  ------  ------  ---  ----
+matrixMult_1  matrixMult   matrixMult   125746  450475  25   54
+-------------------------------------------------------------------------------

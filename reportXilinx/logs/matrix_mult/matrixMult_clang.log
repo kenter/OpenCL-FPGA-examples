@@ -1,0 +1,4 @@
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/matrix_mult.cl:107:14: warning: unknown attribute 'num_simd_work_items' ignored [-Wunknown-attributes]
+__attribute((num_simd_work_items(SIMD_WORK_ITEMS)))
+             ^
+1 warning generated.

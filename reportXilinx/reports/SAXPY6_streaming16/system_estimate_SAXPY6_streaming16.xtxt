@@ -1,0 +1,43 @@
+===============================================================================
+Version:    xocc v2018.3 (64-bit)
+Build:      SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+Copyright:  Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Mar 24 18:37:40 2019
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             SAXPY6_streaming16
+Target Device:           alpha-data:adm-pcie-8k5:dynamic:5.0
+Target Clock:            300.000000MHz
+Total number of kernels: 2
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library      Compute Units
+-----------  ----  ------------------  ------------------  -------------
+SAXPY        clc   fpga0:OCL_REGION_0  SAXPY6_streaming16  1
+readY        clc   fpga0:OCL_REGION_0  SAXPY6_streaming16  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     SAXPY6_streaming16
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name  Target Frequency  Estimated Frequency
+------------  -----------  -----------  ----------------  -------------------
+readY_1       readY        readY        300.300293        403.714172
+SAXPY_1       SAXPY        SAXPY        300.300293        322.268768
+
+Latency Information (clock cycles)
+Compute Unit  Kernel Name  Module Name  Start Interval  Best Case  Avg Case  Worst Case
+------------  -----------  -----------  --------------  ---------  --------  ----------
+readY_1       readY        readY        undef           undef      undef     undef
+SAXPY_1       SAXPY        SAXPY        undef           undef      undef     undef
+
+Area Information
+Compute Unit  Kernel Name  Module Name  FF     LUT   DSP  BRAM
+------------  -----------  -----------  -----  ----  ---  ----
+readY_1       readY        readY        4243   3058  12   30
+SAXPY_1       SAXPY        SAXPY        16165  9984  92   30
+-------------------------------------------------------------------------------

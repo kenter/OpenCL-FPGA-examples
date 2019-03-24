@@ -1,0 +1,31 @@
+make: aocl: Command not found
+make: aocl: Command not found
+xocc -g -R 2 -s --platform=alpha-data_adm-pcie-8k5_dynamic_5_0 --memory_port_data_width all:512 -c device/vscale4_u16_epi.cl -o vscale4_u16_epi.xo
+
+****** xocc v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+Attempting to get a license: ap_opencl
+INFO: [XOCC 17-1540] The version limit for your license is '2018.12' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+Feature available: ap_opencl
+INFO: [XOCC 60-1306] Additional information associated with this xocc compile can be found at:
+	Reports: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/reports/vscale4_u16_epi
+	Log files: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/logs/vscale4_u16_epi
+INFO: [XOCC 60-585] Compiling for hardware target
+Running SDx Rule Check Server on port:43737
+INFO: [XOCC 60-895]   Target platform: /opt/Xilinx/SDx/2018.3/platforms/alpha-data_adm-pcie-8k5_dynamic_5_0/alpha-data_adm-pcie-8k5_dynamic_5_0.xpfm
+INFO: [XOCC 60-423]   Target device: alpha-data_adm-pcie-8k5_dynamic_5_0
+INFO: [XOCC 60-242] Creating kernel: 'vscale'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: vscale Log file: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/vscale4_u16_epi/vscale/vivado_hls.log :
+INFO: [XOCC 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [XOCC 204-61] Pipelining loop 'vscale_vec'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 10.
+INFO: [XOCC 204-61] Pipelining loop 'vscale_epi'.
+INFO: [XOCC 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 150.
+INFO: [XOCC 60-594] Finished kernel compilation
+INFO: [XOCC 60-244] Generating system estimate report...
+INFO: [XOCC 60-1092] Generated system estimate report: /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/reports/vscale4_u16_epi/system_estimate_vscale4_u16_epi.xtxt
+INFO: [XOCC 60-586] Created vscale4_u16_epi.xo
+INFO: [XOCC 60-791] Total elapsed time: 0h 0m 50s

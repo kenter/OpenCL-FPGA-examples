@@ -1,0 +1,135 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /opt/Xilinx/Vivado/2018.3/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'kenter' on host 'fe-1.cc.pc2.uni-paderborn.de' (Linux_x86_64 version 3.10.0-693.17.1.el7.x86_64) on Sun Mar 24 18:36:37 CET 2019
+INFO: [HLS 200-10] On os "CentOS Linux release 7.3.1611 (Core) "
+INFO: [HLS 200-10] In directory '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/SAXPY6_streaming16/SAXPY'
+INFO: [HLS 200-10] Creating and opening project '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/SAXPY6_streaming16/SAXPY/SAXPY'.
+INFO: [HLS 200-10] Adding design file '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl' to the project
+INFO: [HLS 200-10] Creating and opening solution '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/_x/SAXPY6_streaming16/SAXPY/SAXPY/solution'.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flva1517-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -profile' configuration: config_rtl -stall_sig_gen=1
+INFO: [HLS 200-435] Setting 'config_sdx -profile' configuration: config_rtl -profile=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -pipeline_loops=64
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_compile -name_max_length=256
+INFO: [XFORM 203-1161] The maximum of name length is set into 256.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -enable_dsp_full_reg=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -auto_prefix=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_rtl -enable_maxiConservative=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_interface -m_axi_addr64=1
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.9ns.
+INFO: [HLS 200-10] Starting synthesis with clang3.9 flow ...
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl' ... 
+WARNING: [HLS 200-40] clang: warning: argument unused during compilation: '--gcc-toolchain=/opt/Xilinx/Vivado/2018.3/lnx64/tools/gcc' [-Wunused-command-line-argument]
+WARNING: [HLS 200-40] In file included from /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl:1:
+WARNING: [HLS 200-40] /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/macros.h:2:26: warning: unknown OpenCL extension 'cl_intel_channels' - ignoring [-Wignored-pragmas]
+WARNING: [HLS 200-40] #pragma OPENCL EXTENSION cl_intel_channels : enable
+                         ^
+WARNING: [HLS 200-40] 1 warning generated.
+INFO: [HLS 214-115] Burst read of variable length and width 512 has been inferred on 'gmem' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl:23:5)
+INFO: [HLS 214-115] Burst write of variable length and width 512 has been inferred on 'gmem' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl:23:5)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 539.176 ; gain = 12.129 ; free physical = 219157 ; free virtual = 248855
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 539.176 ; gain = 12.129 ; free physical = 219157 ; free virtual = 248855
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 539.176 ; gain = 12.129 ; free physical = 219490 ; free virtual = 249199
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 539.176 ; gain = 12.129 ; free physical = 219486 ; free virtual = 249195
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1.1.1' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl:23) in function 'SAXPY' automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 667.176 ; gain = 140.129 ; free physical = 219461 ; free virtual = 249170
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'XCL_WG_DIM_X' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl:23:5) in function 'SAXPY' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'XCL_WG_DIM_Y' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl:18:34) in function 'SAXPY'.
+INFO: [XFORM 203-541] Flattening a loop nest 'XCL_WG_DIM_Z' (/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/SAXPY6_streaming16.cl:18:34) in function 'SAXPY'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 667.176 ; gain = 140.129 ; free physical = 219464 ; free virtual = 249174
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'SAXPY' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'SAXPY' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'XCL_WG_DIM_Z_XCL_WG_DIM_Y_XCL_WG_DIM_X.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 21.
+WARNING: [SCHED 204-21] Estimated clock period (3.103ns) exceeds the target (target clock period: 3.333ns, clock uncertainty: 0.9ns, effective delay budget: 2.433ns).
+WARNING: [SCHED 204-21] The critical path in module 'SAXPY' consists of the following:
+	'sitofp' operation ('conv') [37]  (3.1 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 7.55 seconds; current allocated memory: 64.733 MB.
+INFO: [HLS 200-434] Only 1 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.92 seconds; current allocated memory: 66.757 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'SAXPY' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'SAXPY/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SAXPY/p_y_pipe' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'SAXPY/local_size_x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SAXPY/local_size_y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SAXPY/local_size_z' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SAXPY/x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SAXPY/y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SAXPY/a' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SAXPY/size16' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'SAXPY/p_y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'SAXPY' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'local_size_x', 'local_size_y', 'local_size_z', 'x', 'y', 'a', 'size16' and 'p_y' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'SAXPY_fadd_32ns_32ns_32_11_full_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'SAXPY_fmul_32ns_32ns_32_7_max_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'SAXPY_mul_32ns_32ns_64_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'SAXPY_mul_64ns_32ns_96_6_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'SAXPY_sitofp_32ns_32_8_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'SAXPY'.
+INFO: [HLS 200-111]  Elapsed time: 1.48 seconds; current allocated memory: 71.163 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'SAXPY_SAXPY_mul_32ns_32ns_64_5_1_MulnS_0'
+INFO: [RTMG 210-282] Generating pipelined core: 'SAXPY_SAXPY_mul_64ns_32ns_96_6_1_MulnS_1'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:08 ; elapsed = 00:00:22 . Memory (MB): peak = 667.176 ; gain = 140.129 ; free physical = 219386 ; free virtual = 249177
+INFO: [SYSC 207-301] Generating SystemC RTL for SAXPY with prefix SAXPY_.
+INFO: [VHDL 208-304] Generating VHDL RTL for SAXPY with prefix SAXPY_.
+INFO: [VLOG 209-307] Generating Verilog RTL for SAXPY with prefix SAXPY_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-1460] Use of init.tcl in /upb/departments/pc2/users/k/kenter/.Xilinx/Vivado/init.tcl is deprecated. Please use Vivado_init.tcl 
+Sourcing tcl script '/upb/departments/pc2/users/k/kenter/.Xilinx/Vivado/init.tcl'
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'SAXPY_SAXPY_ap_fadd_9_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'SAXPY_SAXPY_ap_fadd_9_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'SAXPY_SAXPY_ap_fadd_9_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'SAXPY_SAXPY_ap_fmul_5_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'SAXPY_SAXPY_ap_fmul_5_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'SAXPY_SAXPY_ap_fmul_5_max_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'SAXPY_SAXPY_ap_sitofp_6_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'SAXPY_SAXPY_ap_sitofp_6_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'SAXPY_SAXPY_ap_sitofp_6_no_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 24 18:37:33 2019...
+Vivado HLS completed successfully
+INFO: [HLS 200-112] Total elapsed time: 56.24 seconds; peak allocated memory: 71.163 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Mar 24 18:37:33 2019...

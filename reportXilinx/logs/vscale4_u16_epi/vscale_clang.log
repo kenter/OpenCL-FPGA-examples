@@ -1,0 +1,11 @@
+In file included from /upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl:1:
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/macros.h:2:26: warning: unknown OpenCL extension 'cl_intel_channels' - ignoring [-Wignored-pragmas]
+#pragma OPENCL EXTENSION cl_intel_channels : enable
+                         ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl:12:11: warning: unused label 'vscale_vec' [-Wunused-label]
+    LABEL(vscale_vec)
+          ^
+/upb/scratch/departments/pc2/groups/pc2-mitarbeiter/kenter/gitlab/OpenCL-FPGA-examples/device/vscale4_u16_epi.cl:17:11: warning: unused label 'vscale_epi' [-Wunused-label]
+    LABEL(vscale_epi)
+          ^
+3 warnings generated.
